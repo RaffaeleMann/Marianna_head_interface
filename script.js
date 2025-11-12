@@ -1,8 +1,6 @@
 // Write JavaScript here
 // === CONFIGURAZIONE ===
 const BASE_URL = "https://nlpgroup.unior.it/api/marianna_head";
-const USERNAME = "utenteuniornlp";
-const PASSWORD = "prova_asr_unior";
 
 // === TESTO → RISPOSTA TESTUALE ===
 async function getTextResponse() {
@@ -20,8 +18,7 @@ async function getTextResponse() {
     const res = await fetch(`${BASE_URL}/text_response`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Basic " + btoa(`${USERNAME}:${PASSWORD}`)
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({ text })
     });
@@ -33,7 +30,6 @@ async function getTextResponse() {
 
     const data = await res.json();
 
-    // Usa il campo corretto della risposta API
     if (data.summary) {
       output.textContent = `🗣️ ${data.summary}`;
     } else if (data.transcription) {
@@ -97,9 +93,6 @@ async function sendRecordedAudio() {
 
     const res = await fetch(`${BASE_URL}/pipeline_audio`, {
       method: "POST",
-      headers: {
-        "Authorization": "Basic " + btoa(`${USERNAME}:${PASSWORD}`)
-      },
       body: formData
     });
 
