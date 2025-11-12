@@ -78,6 +78,14 @@ textarea {
   font-family: inherit;
 }
 
+.response-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+
 button {
   background: var(--napoli-blue);
   color: white;
