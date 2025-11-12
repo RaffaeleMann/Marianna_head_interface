@@ -31,7 +31,7 @@ async function getTextResponse() {
     const data = await res.json();
 
     if (data.summary) {
-  output.innerHTML = `<img src="img/marianna_pxl.png" alt="Marianna" class="response-icon"> ${data.summary}`;
+      output.textContent = `🗣️ ${data.summary}`;
     } else if (data.transcription) {
       output.textContent = `Trascrizione: ${data.transcription}`;
     } else {
