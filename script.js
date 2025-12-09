@@ -1,7 +1,7 @@
 // Write JavaScript here
 // === CONFIGURAZIONE ===
 const BASE_URL = "https://nlpgroup.unior.it/api/marianna_head"; // API CONTENUTI
-const CHAT_URL = "https://nlpgroup.unior.it/api/marianna_head/marianna_chat"; // <-- IL TUO ENDPOINT /chat
+const CHAT_URL = "https://nlpgroup.unior.it/api/marianna_head/chat"; // <-- ENDPOINT /chat
 
 // Credenziali BASIC DI MARIANNA HEAD
 const API_USERNAME = "utenteuniornlp";
