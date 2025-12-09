@@ -47,7 +47,7 @@ async function getTextResponse() {
       },
       body: JSON.stringify({
         text,
-        top_k: 1,
+        top_k: 3, // quanto contesto
         use_stopwords: true,
       }),
     });
@@ -73,7 +73,7 @@ async function getTextResponse() {
       },
       body: JSON.stringify({
         message: text,
-        context: context,  // 👈 SOLO questo viene passato
+        context: context,  //  SOLO "context" viene passato
       }),
     });
 
