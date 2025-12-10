@@ -62,7 +62,7 @@ async function getTextResponse() {
     // 👉 prendiamo SOLO ciò che è dentro "context"
     const context = contextData.context || "";
 
-    output.textContent = "📚 Contesto trovato. Genero risposta...";
+    output.textContent = "Sto formulando la risposta...";
 
     // 2️⃣ CHIAMA /chat → manda SOLO context
     const chatRes = await fetch(`${CHAT_URL}`, {
@@ -157,7 +157,7 @@ async function sendRecordedAudio() {
     const transcription = res.headers.get("X-Transcription") || "—";
     const summary = res.headers.get("X-Summary") || "—";
 
-    responseHeaders.textContent = `🎤 Trascrizione: ${transcription}\n📜 Riassunto: ${summary}`;
+    // responseHeaders.textContent = `🎤 Trascrizione: ${transcription}\n📜 Riassunto: ${summary}`;
     responseAudio.play();
 
   } catch (err) {
