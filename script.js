@@ -156,7 +156,7 @@ async function sendRecordedAudio() {
 
     // const transcription = res.headers.get("X-Transcription") || "—";
     // const summary = res.headers.get("X-Summary") || "—";
-
+    responseHeaders.textContent = "";
     // responseHeaders.textContent = `🎤 Trascrizione: ${transcription}\n📜 Riassunto: ${summary}`;
     responseAudio.play();
 
