@@ -154,8 +154,8 @@ async function sendRecordedAudio() {
     const audioBlob = await res.blob();
     responseAudio.src = URL.createObjectURL(audioBlob);
 
-    const transcription = res.headers.get("X-Transcription") || "—";
-    const summary = res.headers.get("X-Summary") || "—";
+    // const transcription = res.headers.get("X-Transcription") || "—";
+    // const summary = res.headers.get("X-Summary") || "—";
 
     // responseHeaders.textContent = `🎤 Trascrizione: ${transcription}\n📜 Riassunto: ${summary}`;
     responseAudio.play();
